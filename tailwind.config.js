@@ -22,8 +22,12 @@ export default {
       gridTemplateColumns: {
         // Simple 16 column grid
         '16': 'repeat(20, minmax(0, 1fr))',
-      }
+      },
+      backgroundImage: {
+      'store': "url('/nav/pattern.svg')",
     },
   },
   plugins: [],
 }
+}
+
