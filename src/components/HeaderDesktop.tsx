@@ -28,7 +28,7 @@ export default function HeaderDesktop({ setIsSearchOpen, isSearchOpen, setActive
 
   return (
     <>
-      <header>
+      <header className='overflow-x-hidden'>
         <div className='flex justify-between w-full items-center'>
           <div className={`flex justify-center gap-2 h-full items-${isSearchOpen ? 'start' : 'center'} ${isSearchOpen ? 'z-10' : ''}`}>
             <img src={logo} className='cursor-pointer bg-secondary py-5 px-4' alt="" />

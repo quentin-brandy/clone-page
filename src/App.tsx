@@ -52,7 +52,7 @@ function App() {
       <div className={`overflow-x-hidden bg-white ${isSearchOpen || activeNavItem ? 'brightness-50' : ''}`}>
         <div className="xl:flex xl:flex-col xl:items-center mb-28">
           <CardProduct />
-          <div className="xl:max-w-screen-xl xl:w-full ">
+          <div className="xl:max-w-screen-xl  xl:w-full ">
             <Description />
             <RatingSupport />
             <Specificity />
