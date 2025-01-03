@@ -1,5 +1,5 @@
 import NavbarContent from './Navbar_Content';
-import mario from '/mario.svg';
+import mario from '/other/mario.svg';
 import { useState } from 'react';
 export default function NavBarDesktop({ handleNavItemClick, activeNavItem }: any) {
 const [hoveredIcon, setHoveredIcon] = useState<string | null>(null);

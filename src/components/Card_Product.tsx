@@ -1,10 +1,10 @@
 import React from 'react';
-import arrowright from '/arrow_right.svg';
+import arrowright from '/other/arrow_right.svg';
 import CarrousselProduct from './CarrousselProduct';
-import GoldCoin from '/my-nintendo-gold-coin.png';
+import GoldCoin from '/other/my-nintendo-gold-coin.png';
 import { useState } from 'react';
-import GameRate from '/game_rate.svg';
-import Download from '/download.svg';
+import GameRate from '/other/game_rate.svg';
+import Download from '/other/download.svg';
 
 const CardProduct: React.FC = () => {
     const [isliked, setIsliked] = useState(false);

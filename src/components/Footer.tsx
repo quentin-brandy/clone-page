@@ -1,10 +1,10 @@
-import logo from '/logo.svg'
-import Youtube from '/YoutubeIcon.svg'
-import Facebook from '/FacebookIcon.svg'
-import X from '/XIcon.svg'
-import Instagram from '/InstagramIcon.svg'
-import ESRBCertif from '/ESRB_certif.png'
-import USA from '/FlagUsaIconRegionSelect.png'
+import logo from '/other/logo.svg'
+import Youtube from '/other/YoutubeIcon.svg'
+import Facebook from '/other/FacebookIcon.svg'
+import X from '/other/XIcon.svg'
+import Instagram from '/other/InstagramIcon.svg'
+import ESRBCertif from '/other/ESRB_certif.png'
+import USA from '/other/FlagUsaIconRegionSelect.png'
 export default function Footer(){
     return(
    <>

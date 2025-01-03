@@ -7,7 +7,7 @@ import manette from "/nav/manette.svg";
 import etiquette from "/nav/etiquette.svg";
 import tshirt from "/nav/tshirt.svg";
 import whiteclose from "/nav/whiteclose.svg";
-import mariocasquette from "/mario.svg"
+import mariocasquette from "/other/mario.svg"
 import oled from '/nav/oled.png';
 import allconsole from '/nav/allconsole.png';
 import controller from '/nav/procon.png';

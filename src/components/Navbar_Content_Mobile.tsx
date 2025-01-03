@@ -1,5 +1,5 @@
 import { useState } from "react";
-import mario from '/mario.svg';
+import mario from '/other/mario.svg';
 import Dpad from '/nav/DPadIcon.svg';
 import starshop from "/nav/starmobile_red.svg";
 import joycon from "/nav/joycon.svg";

@@ -1,4 +1,4 @@
-import flag from '/FlagUsaIconRegionSelect.png'
+import flag from '/other/FlagUsaIconRegionSelect.png'
 import { useState } from 'react';
 export default function Headers_Logo() {
 const [hoveredIcon, setHoveredIcon] = useState<string | null>(null);

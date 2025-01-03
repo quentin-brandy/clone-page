@@ -3,7 +3,7 @@ import MarioLuigiBrothership from '/search/9afc95d7bb55198b983e6942649af01932c45
 import MySimsCozyBundle from '/search/75826a6bef43399a5092771092ddf67c519567c08cf6b94d18101218d650132b.png';
 import NintendoSoundClock  from '/search/121311-nintendo-sound-clock-alarmo-mario-face-front-1200x675.png';
 import MarioJamboree from '/search/ba0572bf9d840b03bf9958809943fb3c76c3adfd6d8f2704b0f1b766f8aa4027.png';
-import close from '/close.svg';
+import close from '/other/close.svg';
 
 interface SearchPageProps {
     handleCloseSearch?: () => void;

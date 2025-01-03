@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
-import search from '/search mobile.svg';
-import imgprofile from '/téléchargé.svg';
-import logo from '/logo.svg';
-import flag from '/FlagUsaIconRegionSelect.png';
-import nintendostore from '/my_nintendo_store.svg';
-import nintendopoints from '/my_nintendo_points.svg';
-import shipping from '/shipping.svg';
+import search from '/other/search mobile.svg';
+import imgprofile from '/other/téléchargé.svg';
+import logo from '/other/logo.svg';
+import flag from '/other/FlagUsaIconRegionSelect.png';
+import nintendostore from '/other/my_nintendo_store.svg';
+import nintendopoints from '/other/my_nintendo_points.svg';
+import shipping from '/other/shipping.svg';
 import NavbarContentMobile from './Navbar_Content_Mobile';
 import SearchPage from './SearchPage';
 interface HeaderProps {

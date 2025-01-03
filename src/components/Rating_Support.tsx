@@ -1,7 +1,7 @@
-import GameRate from "/game_rate.svg";
-import tvicon from "/tv_icon.svg";
-import tabletopicon from "/tablet_icon.svg";
-import handheldicon from "/handle_icon.svg";
+import GameRate from "/other/game_rate.svg";
+import tvicon from "/other/tv_icon.svg";
+import tabletopicon from "/other/tablet_icon.svg";
+import handheldicon from "/other/handle_icon.svg";
 
 export default function RatingSupport() {
     return (

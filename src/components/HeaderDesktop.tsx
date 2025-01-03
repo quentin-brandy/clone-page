@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import search from '/searchDesktop.svg';
-import arrowdown from '/arrow_down.svg';
-import logo from '/logo.svg';
-import nintendopoints from '/my_nintendo_points.svg';
-import shipping from '/shipping.svg';
+import search from '/other/searchDesktop.svg';
+import arrowdown from '/other/arrow_down.svg';
+import logo from '/other/logo.svg';
+import nintendopoints from '/other/my_nintendo_points.svg';
+import shipping from '/other/shipping.svg';
 import SearchPage from './SearchPage';
-import close from '/close.svg';
+import close from '/other/close.svg';
 import Headers_Logo from './Headers_Logo';
 import NavBarDesktop from './Navbar_Desktop';
 

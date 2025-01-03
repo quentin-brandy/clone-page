@@ -1,11 +1,11 @@
-import MytimeatPortia from '/mytimeatportia.jpg';
-import PotionPermit from '/potionpermit.jpg'
-import Ooblets from '/ooblets.jpg'
-import BearAndBreakfast from '/bread&breakfast.jpg'
-import faefarm from '/faefarm.jpg'
-import CarrousselArrowRight from '/CarrousselArrowRight.svg';
-import CarrousselArrowLeft from '/CarrousselArrowLeft.svg';
-import Reduc from '/reduc.svg';
+import MytimeatPortia from '/other/mytimeatportia.jpg';
+import PotionPermit from '/other/potionpermit.jpg'
+import Ooblets from '/other/ooblets.jpg'
+import BearAndBreakfast from '/other/bread&breakfast.jpg'
+import faefarm from '/other/faefarm.jpg'
+import CarrousselArrowRight from '/other/CarrousselArrowRight.svg';
+import CarrousselArrowLeft from '/other/CarrousselArrowLeft.svg';
+import Reduc from '/other/reduc.svg';
 import { useRef, useState, useEffect } from 'react';
 
 export default function CarrousselReco() {

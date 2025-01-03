@@ -1,5 +1,5 @@
 import Onlinelogo from '/specificity/NsoHorizontalLogoIcon.svg';
-import Controller from '/Pro-Controller-Hands.png'
+import Controller from '/other/Pro-Controller-Hands.png'
 export default function Online() {
     return(
 <section className="flex items-center  mt-20 bg-[#f8f8f8] rounded-lg ">
