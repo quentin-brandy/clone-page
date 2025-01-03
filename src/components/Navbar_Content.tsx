@@ -8,7 +8,6 @@ import etiquette from "/nav/etiquette.svg";
 import tshirt from "/nav/tshirt.svg";
 import whiteclose from "/nav/whiteclose.svg";
 import mariocasquette from "/mario.svg"
-import close from '/nav/close.svg';
 import oled from '/nav/oled.png';
 import allconsole from '/nav/allconsole.png';
 import controller from '/nav/procon.png';

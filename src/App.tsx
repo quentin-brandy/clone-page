@@ -41,10 +41,6 @@ function App() {
     };
   }, []);
 
-  const handleSearchClick = () => {
-    setIsSearchOpen(true);
-  }
-
   return (
     <>
       <div className={`lg:hidden`} ref={headerMobileRef}>

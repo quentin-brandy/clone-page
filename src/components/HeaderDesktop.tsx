@@ -1,9 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import search from '/searchDesktop.svg';
-import imgprofile from '/téléchargé.svg';
 import arrowdown from '/arrow_down.svg';
 import logo from '/logo.svg';
-import nintendostore from '/my_nintendo_store.svg';
 import nintendopoints from '/my_nintendo_points.svg';
 import shipping from '/shipping.svg';
 import SearchPage from './SearchPage';

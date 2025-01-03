@@ -1,5 +1,4 @@
 import CardSearch from './Card_Search';
-import MytimeatPortia from '/a52346fa3eeb45c7ccd23985e659a21df452a802bd0b105f666ab6231fd468ab.jpg';
 import MarioLuigiBrothership from '/search/9afc95d7bb55198b983e6942649af01932c45df112e8b8842e0578143dcdeaeb.png';
 import MySimsCozyBundle from '/search/75826a6bef43399a5092771092ddf67c519567c08cf6b94d18101218d650132b.png';
 import NintendoSoundClock  from '/search/121311-nintendo-sound-clock-alarmo-mario-face-front-1200x675.png';

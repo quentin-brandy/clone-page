@@ -3,7 +3,7 @@ import mario from '/mario.svg';
 import { useState } from 'react';
 export default function NavBarDesktop({ handleNavItemClick, activeNavItem }: any) {
 const [hoveredIcon, setHoveredIcon] = useState<string | null>(null);
-const [reverseIcon, setReverseIcon] = useState<string| null>(null);
+
 
     return (
         <>

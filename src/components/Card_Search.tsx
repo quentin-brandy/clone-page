@@ -13,7 +13,7 @@ useEffect(() => {
 }, [card.platform]);
 
 return (
-    <div className="flex gap-4 border-2 border-lightgrey rounded-2xl w-[360px] relative">
+    <div className="flex gap-4 border-2 border-lightgrey rounded-2xl w-[360px] relative cursor-pointer">
         <img src={card.img} alt={card.title} className="object-cover overflow-hidden rounded-s-2xl min-w-36 max-w-36" />
         <div className="flex flex-col items-stretch justify-between gap-2 pr-2 py-2 w-full">
             <h2 className="text-logo font-medium text-sm">{card.title}</h2>
