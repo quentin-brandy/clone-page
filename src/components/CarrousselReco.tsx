@@ -1,4 +1,8 @@
-import MytimeatPortia from '/a52346fa3eeb45c7ccd23985e659a21df452a802bd0b105f666ab6231fd468ab.jpg';
+import MytimeatPortia from '/mytimeatportia.jpg';
+import PotionPermit from '/potionpermit.jpg'
+import Ooblets from '/ooblets.jpg'
+import BearAndBreakfast from '/bread&breakfast.jpg'
+import faefarm from '/faefarm.jpg'
 import CarrousselArrowRight from '/CarrousselArrowRight.svg';
 import CarrousselArrowLeft from '/CarrousselArrowLeft.svg';
 import Reduc from '/reduc.svg';
@@ -8,76 +12,41 @@ export default function CarrousselReco() {
     const cards = [
         {
             img: MytimeatPortia,
-            date: "9/22/22",
-            price: "$20",
+            date: "4/16/19",
+            price: "$29.99",
             title: "My Time at Portia",
             platform: "Nintendo Switch",
         },
         {
-            img: MytimeatPortia,
-            date: "10/10/22",
-            price: "$25",
-            title: "Another Game",
-            platform: "PlayStation 4",
-            saleprice: "$30",
-            saleend: "10/15/22",
-            reduce: "-5%",
+            img: PotionPermit,
+            date: "9/22/22",
+            price: "$19.99",
+            title: "Potion Permit",
+            platform: "Nintendo Switch",
+            saleprice: "$9.99",
+            saleend: "2 days",
+            reduce: "-50%",
         },
         {
-            img: MytimeatPortia,
-            date: "11/15/22",
-            price: "$30",
-            title: "Yet Another Game",
-            platform: "Xbox One",
+            img: faefarm,
+            date: "9/8/23",
+            price: "$29.99",
+            title: "Fae Farm",
+            platform: "Nintendo Switch",
             demo: true,
         },
         {
-            img: MytimeatPortia,
-            date: "12/01/22",
-            price: "$35",
-            title: "Game Four",
-            platform: "PC",
-        },
-        {
-            img: MytimeatPortia,
-            date: "12/25/22",
-            price: "$40",
-            title: "Game Five",
+            img: BearAndBreakfast,
+            date: "9/15/22",
+            price: "$19.99",
+            title: "Bear and Breakfast",
             platform: "Nintendo Switch",
         },
         {
-            img: MytimeatPortia,
-            date: "12/25/22",
-            price: "$40",
-            title: "Game Five",
-            platform: "Nintendo Switch",
-        },
-        {
-            img: MytimeatPortia,
-            date: "12/25/22",
-            price: "$40",
-            title: "Game Five",
-            platform: "Nintendo Switch",
-        },
-        {
-            img: MytimeatPortia,
-            date: "12/25/22",
-            price: "$40",
-            title: "Game Five",
-            platform: "Nintendo Switch",
-        },
-        {
-            img: MytimeatPortia,
-            date: "12/25/22",
-            price: "$40",
-            title: "Game Five",
-            platform: "Nintendo Switch",
-        },
-        {
-            img: MytimeatPortia,
-            date: "12/25/22",
-            price: "$40",
-            title: "Game Five",
+            img: Ooblets,
+            date: "9/1/22",
+            price: "$29.99",
+            title: "Ooblets",
             platform: "Nintendo Switch",
         },
     ];
@@ -143,9 +112,9 @@ export default function CarrousselReco() {
                 className='flex gap-5 overflow-hidden w-full scroll-smooth snap-x snap-mandatory'
             >
                 {cards.map((card, index) => (
-                    <div key={index} className='flex flex-col gap-3 flex-shrink-0 overflow-hidden border border-lightgrey rounded-xl snap-start pb-4 h-fit'>
+                    <div key={index} className='group flex flex-col gap-3 flex-shrink-0 overflow-hidden border border-logo border-opacity-20 rounded-xl snap-start pb-4 h-fit transition-transform transform  hover:shadow-lg hover:cursor-pointer'>
                         <div className='relative'>
-                            <img className='max-h-28 md:max-h-36 object-cover' src={card.img} alt={card.title} />
+                            <img className='max-h-28 md:max-h-36 object-cover transition-transform transform group-hover:-translate-y-2' src={card.img} alt={card.title} />
                             {card.demo && (
                                 <div className='absolute top-0 left-0 bg-blue-600 font-medium text-white text-xs px-2 py-1 z-10'>
                                     Demo Available
@@ -154,7 +123,7 @@ export default function CarrousselReco() {
                         </div>
                    
                         <div className='flex flex-col gap-1 mb-5 px-4 '>
-                            <p className='text-logo font-bold text-sm'>{card.title}</p>
+                            <p className='text-logo font-bold text-sm group-hover:text-secondary'>{card.title}</p>
                             <p className='text-xs'>{card.date}</p>
                         </div>
                         <div className='px-4'>

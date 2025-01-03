@@ -6,12 +6,18 @@ import flag from '/FlagUsaIconRegionSelect.png';
 import nintendostore from '/my_nintendo_store.svg';
 import nintendopoints from '/my_nintendo_points.svg';
 import shipping from '/shipping.svg';
-import NavbarContentMobile from './Navbar_content_mobile';
+import NavbarContentMobile from './Navbar_Content_Mobile';
+import SearchPage from './SearchPage';
+interface HeaderProps {
+  setMobileMenuOpen: (isOpen: boolean) => void;
+  isMobileMenuOpen: boolean;
+}
 
-export default function Header() {
+export default function Header({ setMobileMenuOpen, isMobileMenuOpen }: HeaderProps) {
   const [hoveredIcon, setHoveredIcon] = useState<string | null>(null);
   const [showFirstMessage, setShowFirstMessage] = useState(true);
-  const [openmenu, setOpenmenu] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+
   useEffect(() => {
     const interval = setInterval(() => {
       setShowFirstMessage(prevShowFirstMessage => !prevShowFirstMessage);
@@ -20,9 +26,13 @@ export default function Header() {
     return () => clearInterval(interval);
   }, []);
 
-    const handleNavItemClick = () => {
-    setOpenmenu(!openmenu);
-}
+  const handleNavItemClick = () => {
+    setMobileMenuOpen(!isMobileMenuOpen);
+  }
+
+  const handleSearchClick = () => {
+    setIsSearchOpen(!isSearchOpen);
+  };
 
   return (
     <>
@@ -51,7 +61,8 @@ export default function Header() {
           </div>
         )}
         <div className="fixed bottom-4 left-1/2 -translate-x-1/2 w-[calc(100%-16rem)] max-w-md z-10">
-        {openmenu && <NavbarContentMobile handleNavItemClick={handleNavItemClick}/>}
+        {isMobileMenuOpen && <NavbarContentMobile handleNavItemClick={handleNavItemClick}/>}
+        {isSearchOpen && <SearchPage />}
                   <nav className="bg-white rounded-full shadow-lg relative py-2">
             <div className="flex justify-between items-center px-6 py-2">
               <div className="flex flex-col justify-center items-center cursor-pointer hover:text-red-500">
@@ -83,11 +94,17 @@ export default function Header() {
                 <img src={imgprofile} alt="icon5" className="w-6 h-6" />
               </div>
             </div>
-            <div className="absolute -top-1 left-1/2 -translate-x-1/2 bg-red-600 hover:bg-red-700 rounded-full p-2 shadow-md cursor-pointer">
+            <div className="absolute -top-1 left-1/2 -translate-x-1/2 bg-red-600 hover:bg-red-700 rounded-full p-2 shadow-md cursor-pointer" 
+            onClick={handleSearchClick}>
               <img src={search} alt="icon3" className="w-10 h-10 text-primary" />
             </div>
           </nav>
         </div>
+        {isSearchOpen && (
+  <div className="fixed inset-0 bg-white z-20">
+    <SearchPage handleCloseSearch={() => setIsSearchOpen(false)} />
+  </div>
+)}
       </header>
     </>
   );

@@ -1,5 +1,5 @@
 import React from 'react';
-import img1 from '/7aa9c6cf5e7d4cecf481f18b1d7a9d79e7aab85045b22203effb2dda409bc5b7 (2).jpg'
+import img1 from '/7aa9c6cf5e7d4cecf481f18b1d7a9d79e7aab85045b22203effb2dda409bc5b7.png'
 import { useState } from 'react';
 const Description: React.FC = () => {
 const [moreText, setMoreText] = useState(false);

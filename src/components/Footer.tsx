@@ -11,18 +11,13 @@ export default function Footer(){
    <footer className='w-full'>
 <div className='flex justify-between bg-secondary py-9 px-4 mb-4 flex-wrap'>
     
-        <img className='w-44' src={logo} alt="" />
+       <a className='cursor-pointer' href='#'> <img className='w-44' src={logo} alt="" /></a>
         <div className='flex gap-16 flex-wrap'>
-
-<img src={Facebook} alt="" />
-
- <img src={Instagram} alt="" />
-
-  <img src={X} alt="" />
-
-   <img src={Youtube} alt="" />
-
-</div>
+            <a className='cursor-pointer' href="#"><img className='w-8' src={Facebook} alt="Facebook" /></a>
+            <a className='cursor-pointer' href="#"><img className='w-8' src={Instagram} alt="Instagram" /></a>
+            <a className='cursor-pointer' href="#"><img className='w-8' src={X} alt="X" /></a>
+            <a className='cursor-pointer' href="#"><img className='w-8' src={Youtube} alt="Youtube" /></a>
+        </div>
     </div>
         <section className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-8 p-8'>
         <div className="flex flex-col border-l-2 border-lightgrey pl-4">

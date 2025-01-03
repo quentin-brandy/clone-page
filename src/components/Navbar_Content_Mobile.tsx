@@ -18,6 +18,10 @@ export default function NavbarContentMobile({ handleNavItemClick }: NavbarConten
     setCurrentMenu(null);
     setDropdownMenu(null);
   };
+  
+  const handleClose = () => {
+    handleNavItemClick(null);
+  };
 
   const handleMenuItemClick = (menu: string) => {
     setCurrentMenu(menu);
@@ -27,6 +31,7 @@ export default function NavbarContentMobile({ handleNavItemClick }: NavbarConten
   const handleDropdownClick = (menu: string) => {
     setDropdownMenu(dropdownMenu === menu ? null : menu);
   };
+  
 
   const renderSubcategories = (menu: string) => {
     switch (menu) {
@@ -38,23 +43,23 @@ export default function NavbarContentMobile({ handleNavItemClick }: NavbarConten
             <span>&#x2304;</span>
             </li>
             {dropdownMenu === 'Games' && (
-              <ul className="flex flex-col gap-4 bg-lightgrey font-light p-4">
-                <li className="">Shop all games</li>
-                <li className="">Nintendo Switch games</li>
-                <li className="">New releases</li>
-                <li className="">Sales & deals</li>
-              </ul>
+                <ul className="flex flex-col gap-4 bg-lightgrey font-light p-4">
+                <li className="hover:text-secondary cursor-pointer">Shop all games</li>
+                <li className="hover:text-secondary cursor-pointer">Nintendo Switch games</li>
+                <li className="hover:text-secondary cursor-pointer">New releases</li>
+                <li className="hover:text-secondary cursor-pointer">Sales & deals</li>
+                </ul>
             )}
             <li className="flex justify-between items-center py-4 px-4 border-b cursor-pointer font-medium " onClick={() => handleDropdownClick('Hardware')}>Hardware
             <span>&#x2304;</span>
             </li>
             {dropdownMenu === 'Hardware' && (
               <ul className="flex flex-col gap-2 bg-lightgrey font-light p-4">
-                <li className="">Shop all hardware</li>
-                <li className="">Nintendo Switch systems</li>
-                <li className="">Joy-Con & controllers</li>
-                <li className="">Cases & more</li>
-                <li className="">amiibo</li>
+                <li className="hover:text-secondary cursor-pointer">Shop all hardware</li>
+                <li className="hover:text-secondary cursor-pointer">Nintendo Switch systems</li>
+                <li className="hover:text-secondary cursor-pointer">Joy-Con & controllers</li>
+                <li className="hover:text-secondary cursor-pointer">Cases & more</li>
+                <li className="hover:text-secondary cursor-pointer">amiibo</li>
 
               </ul>
             )}
@@ -63,11 +68,11 @@ export default function NavbarContentMobile({ handleNavItemClick }: NavbarConten
             </li>
             {dropdownMenu === 'Merchandise' && (
              <ul className="flex flex-col gap-2 bg-lightgrey font-light p-4">
-                <li className="">Shop all merchandise</li>
-                <li className="">Apparel & accessories</li>
-                <li className="">Home & office</li>
-                <li className="">Plush</li>
-                <li className="">Toys</li>
+                <li className="hover:text-secondary cursor-pointer">Shop all merchandise</li>
+                <li className="hover:text-secondary cursor-pointer">Apparel & accessories</li>
+                <li className="hover:text-secondary cursor-pointer">Home & office</li>
+                <li className="hover:text-secondary cursor-pointer">Plush</li>
+                <li className="hover:text-secondary cursor-pointer">Toys</li>
               </ul>
             )}
             <li className="flex justify-between items-center py-4 px-4 border-b cursor-pointer font-medium " onClick={() => handleDropdownClick('Store exclusives')}>Store exclusives
@@ -75,10 +80,10 @@ export default function NavbarContentMobile({ handleNavItemClick }: NavbarConten
             </li>
             {dropdownMenu === 'Store exclusives' && (
              <ul className="flex flex-col gap-2 bg-lightgrey font-light p-4">
-                <li className="">Shop all store exclusives</li>
-                <li className="">Exclusive products</li>
-                <li className="">My Nintendo rewards</li>
-                <li className="">Nintendo Switch Online offers</li>
+                <li className="hover:text-secondary cursor-pointer">Shop all store exclusives</li>
+                <li className="hover:text-secondary cursor-pointer">Exclusive products</li>
+                <li className="hover:text-secondary cursor-pointer">My Nintendo rewards</li>
+                <li className="hover:text-secondary cursor-pointer">Nintendo Switch Online offers</li>
               </ul>
             )}
             <li className="flex justify-between items-center py-4 px-4 border-b cursor-pointer font-medium " onClick={() => handleDropdownClick('Characters')}>Characters
@@ -86,11 +91,11 @@ export default function NavbarContentMobile({ handleNavItemClick }: NavbarConten
             </li>
             {dropdownMenu === 'Characters' && (
               <ul className="flex flex-col gap-2 bg-lightgrey font-light p-4">
-                <li className="">Shop all characters</li>
-                <li className="">Pikmin</li>
-                <li className="">Splatoon</li>
-                <li className="">Super Mario</li>
-                <li className="">The Legend of Zelda</li>
+                <li className="hover:text-secondary cursor-pointer">Shop all characters</li>
+                <li className="hover:text-secondary cursor-pointer">Pikmin</li>
+                <li className="hover:text-secondary cursor-pointer">Splatoon</li>
+                <li className="hover:text-secondary cursor-pointer">Super Mario</li>
+                <li className="hover:text-secondary cursor-pointer">The Legend of Zelda</li>
               </ul>
             )}
             <li className="flex justify-between items-center py-4 px-4 border-b cursor-pointer font-medium " >Sales & deals</li>
@@ -146,7 +151,7 @@ export default function NavbarContentMobile({ handleNavItemClick }: NavbarConten
       </h2>
       <button
         className="absolute cursor-pointer right-4 top-4"
-        onClick={() => handleNavItemClick(null)}
+        onClick={handleClose}
         onMouseEnter={() => setHoveredIcon("close")}
         onMouseLeave={() => setHoveredIcon(null)}
       >

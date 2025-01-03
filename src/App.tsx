@@ -13,21 +13,25 @@ import { useState, useEffect, useRef } from 'react'
 function App() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [activeNavItem, setActiveNavItem] = useState<string | null>(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const headerDesktopRef = useRef<HTMLDivElement>(null);
+  const headerMobileRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (isSearchOpen || activeNavItem) {
+    if (isSearchOpen || activeNavItem || isMobileMenuOpen) {
       document.body.classList.add('overflow-hidden');
     } else {
       document.body.classList.remove('overflow-hidden');
     }
-  }, [isSearchOpen, activeNavItem]);
-
+  }, [isSearchOpen, activeNavItem, isMobileMenuOpen]);
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (headerDesktopRef.current && !headerDesktopRef.current.contains(event.target as Node)) {
         setIsSearchOpen(false);
         setActiveNavItem(null);
+      }
+      if (headerMobileRef.current && !headerMobileRef.current.contains(event.target as Node)) {
+        setIsMobileMenuOpen(false);
       }
     };
 
@@ -43,13 +47,13 @@ function App() {
 
   return (
     <>
-      <div className={`lg:hidden`}>
-        <Headers />
+      <div className={`lg:hidden`} ref={headerMobileRef}>
+      <Headers setMobileMenuOpen={setIsMobileMenuOpen} isMobileMenuOpen={isMobileMenuOpen} />
       </div>
       <div className={`hidden lg:block`} ref={headerDesktopRef}>
         <HeaderDesktop setIsSearchOpen={setIsSearchOpen} isSearchOpen={isSearchOpen} setActiveNavItem={setActiveNavItem} activeNavItem={activeNavItem} />
       </div>
-      <div className={`overflow-x-hidden bg-white ${isSearchOpen || activeNavItem ? 'brightness-50' : ''}`}>
+      <div className={`overflow-x-hidden bg-white ${isSearchOpen || activeNavItem || isMobileMenuOpen ? 'brightness-50' : ''}`}>
         <div className="xl:flex xl:flex-col xl:items-center mb-28">
           <CardProduct />
           <div className="xl:max-w-screen-xl  xl:w-full ">
